@@ -1,9 +1,6 @@
 ## Work in progress
 
-# develop-a-cloud-native-java-application-using-codewind
-This tutorial provides steps to create a cloud native java application using Codewind
-
-## Overview
+# Develop a Cloud Native Java Application using Codewind
 
 Eclipse Codewind is an open source project that makes it easier for developers to create cloud-native applications within their favorite IDE. As of now, Codewind supports Visual Studio Code, Eclipse IDE and Eclipse Che. More editors will be added in the coming months.
 
@@ -19,26 +16,32 @@ Let's start with installing Codewind on Eclipse IDE.
 ## Installing Codewind for Eclipse
 
 Prerequisites:
-- Download and install the latest [Eclipse IDE for Java EE Developers](https://www.eclipse.org/downloads/packages/release/) or use an existing installation. Eclipse IDE version 4.11.0 onwards support Codewind. 
+- Download and install the latest [Eclipse IDE for Java EE Developers](https://www.eclipse.org/downloads/packages/release/) or use an existing installation. Eclipse IDE versions 4.11.0 onwards support Codewind. 
 - Install [Docker](https://docs.docker.com/install/)
 
-Complete the installation:
+Install Codewind
 1. Open the Eclipse IDE and navigate to Help > Eclipse Marketplace.
 2. Search for Codewind.
-3. Click the Install button.
+3. Click the Install button. Note that in below gif image, Codewind is already installed and hence `Installed` option is shown. You should get `Install` button.
 4. Finish the wizard and accept licenses as needed.
-TODO: add gif here.. There is some error on eclipse
+![Codewind Install for Eclipse](./images/codewind-install-eclipse.gif)
 5. When the installation is complete, restart Eclipse.
 6. In Eclipse, navigate to Window -> Show View -> Other.... -> Codewind -> Codewind Explorer.
+![Codewind Explorer View](./images/codewind-view.gif)
 7. Codewind requires the installation of additional Docker images to run. Double-click on the Codewind item in the Codewind Explorer view to complete the installation. The installation may take a few minutes to complete.
+![Codewind Start](./images/codewind-start.png)
 8. Codewind creates a folder called codewind-workspace within your home directory (~/codewind-workspace on mac) to contain your projects.
 
 >> This `codewind-workspace` can be accessed across editors. If you have created Codewind projects in Eclipse IDE, then those projects can be accessed from Visual Studio code's Codewind plugin because of the codewind-workspace folder that is compatible across editors.
 
+## Installing Codewind for VS Code
+
+1. Install [VS Code version 1.28 or later](https://code.visualstudio.com/download).
+2. 
 
 ## TODO to cover Codewind for VS Code/Eclipse Che/Command line?
 
-## Types of templates and their overview
+## Project templates
 
 Codewind provides a set of templates available from which you can create a project. By default the following templates are supported, as of now and more templates will be added - **Go**, **Lagom Java**, **Node.js Express**, **Open Liberty**, **Python**, **Sprint Boot**, **Swift**, **WebSphere Liberty Microprofile**
 TODO need an image here?
@@ -60,7 +63,7 @@ You can edit files to suit your needs.
 
 Modifying the application:
 
-It is very easy to make the changes and deploy them. Let us modify Example.java file. Before making modification, check the response for http://localhost:<port>/v1/example, in a browser (get port number from the home page of the application). Now, let us modify and change the display message to `Congratulations, your modified application is up and running!!!`. Save the file. Wait for a few moments for the changes to be built and deployed. Now check by invoking the rest api http://localhost:<port>/v1/example on your browser. The modified message should be displayed. It is this easy to modify changes in a cloud native application. 
+It is very easy to make the changes and deploy them. Let us modify Example.java file under `src/main/java/application/rest/v1`. Before making modification, check the response for http://localhost:port_no/v1/example, in a browser (get port_no from the home page of the application link from browser). Now, let us modify and change the display message to `Congratulations, your modified application is up and running!!!`. Save the file. Wait for a few moments for the changes to be built and deployed. Now check by invoking the rest api http://localhost:port_no/v1/example on your browser. The modified message should be displayed. It is this easy to modify changes in a cloud native application. 
 
 You can then go on to modify this application to add your business logic. This way you focus on just what is needed for the business logic and not worry about other environmental issues while building a cloud native application. 
 
