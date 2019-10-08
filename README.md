@@ -1,12 +1,10 @@
-Check for TODO
-
 ## Work in progress
 
-# Develop a Cloud Native Java Application using Codewind
+# Quickstart guide to develop a Cloud Native Java Application using Codewind
 
 Eclipse Codewind is an open source project that makes it easier for developers to create cloud-native applications within their favorite IDE. As of now, Codewind supports Visual Studio Code, Eclipse IDE and Eclipse Che. More editors will be added in the coming months.
 
-TODO In this tutorial, we will provide steps to develop a java application using Codewind installed over *Eclipse IDE*.
+In this tutorial, we will provide steps to develop a cloud native applications using Codewind on Eclipse IDE and VS Code.
 
 Codewind enables you to create applications from templates and provide support for launching, updating, testing, and debugging in Docker containers on the desktop. Codewind also supports these features on Kubernetes. You can use Codewind to move existing applications to Docker and Kuberenetes. Codewind provides validation to ensure that applications follow best practices.
 
@@ -37,13 +35,13 @@ Install Codewind
 >> This `codewind-workspace` can be accessed across editors. If you have created Codewind projects in Eclipse IDE, then those projects can be accessed from Visual Studio code's Codewind plugin because of the codewind-workspace folder that is compatible across editors.
 
 
-## Project templates
+### Project templates
 
 Codewind provides a set of templates available from which you can create a project. `Standard Codewind templates`, `Kabanero Collections`, `Appsody Stacks - appsodyhub` contain templates. These have the following templates, as of now and more templates will be added - **Go**, **Lagom Java**, **Node.js Express**, **Open Liberty**, **Python**, **Sprint Boot**, **Swift**, **WebSphere Liberty Microprofile**, **Loopback** etc..
 You can create your own template and use it to create a project. More details [Here](https://www.eclipse.org/codewind/mdteclipseusingadifferenttemplate.html).
 
 
-## Create and run a microprofile project
+### Create and run a microprofile project
 In this tutorial, let us create a project using **WebSphere Liberty Microprofile** template available in Codewind.
 1. In the Codewind Explorer view, ensure that Codewind is running. If not, double click Codewind item to start Codewind.
 2. Upon start, expand `Codewind` item and right click on `Local Projects` and click `New Project....`.
@@ -57,7 +55,7 @@ You can edit files to suit your needs.
 7. In Codewind Explorer view, right click on the project that was created in above step, and click `Open Application`. This opens the application in the default Eclipse browser. You can start using the application.
 
 
-## Modify application:
+### Modify application:
 
 It is very easy to make the changes and deploy them. Let us modify Example.java file under `src/main/java/application/rest/v1`. 
 ![Modify File](./images/modify-file.png)
@@ -72,14 +70,10 @@ The modified message should be displayed. It is this easy to modify changes in a
 You can then go on to modify this application to add your business logic. This way you focus on just what is needed for the business logic and not worry about other environmental issues while building a cloud native application.
 
 
-## Debugging in Codewind
-Check Debugging Codewind projects [here](https://www.eclipse.org/codewind/mdteclipsedebugproject.html)
+### Troubleshooting
 
-Check troubleshooting guidelines for Codewind [here](https://www.eclipse.org/codewind/troubleshooting.html)
-
-## Uninstalling Codewind from eclipse?
-
-https://www.eclipse.org/codewind/mdteclipseuninstall.html
+Check [Debugging Codewind projects](https://www.eclipse.org/codewind/mdteclipsedebugproject.html)
+Check [troubleshooting guidelines for Codewind](https://www.eclipse.org/codewind/troubleshooting.html)
 
 
 ## Working with Codewind on Visual Studio Code
@@ -103,39 +97,40 @@ Codewind is now installed.
 >> This `codewind-workspace` can be accessed across editors. If you have created Codewind projects in Eclipse IDE, then those projects can be accessed from Visual Studio code's Codewind plugin because of the codewind-workspace folder that is compatible across editors.
 
 
-## Project templates
+### Project templates
 
 Codewind provides a set of templates available from which you can create a project. `Standard Codewind templates`, `Kabanero Collections`, `Appsody Stacks - appsodyhub` contain templates. These have the following templates, as of now and more templates will be added - **Go**, **Lagom Java**, **Node.js Express**, **Open Liberty**, **Python**, **Sprint Boot**, **Swift**, **WebSphere Liberty Microprofile**, **Loopback** etc..
 You can create your own template and use it to create a project. More details [Here](https://www.eclipse.org/codewind/mdteclipseusingadifferenttemplate.html).
 
 
-## Create and run a Python project
+### Create and run a Java project
 1. Launch VSCode IDE.
 2. In the `Explorer` view, expand `Codewind` and then `Projects`. 
 3. Right click on `Projects` and select `Create New Project`. 
-4. Select the teamplate from which you want to create a project. For this tutuorial we'll select `Standard Codewind templates`.
-5. Then select a template. Here we'll select `Python` entry.
-6. Enter a name for the project and hit enter. A new Python project is created and can be seen in Codewind workpsace.
+4. Select the template from which you want to create a project. For this tutuorial we'll select `Standard Codewind templates`.
+5. Then select a template. Here we'll select `WebSphere Liberty Microprofile` entry.
+6. Enter a name for the project and hit enter. A new Java microprofile project is created and can be seen in Codewind workpsace.
 7. After a few minutes, the project is in running status, after after build and deploy. Once it is in running status, right click on the Python project in Codewind view and click `Open App`.
-![VSCode Create Project](./images/vscode-create-project.gif)
+![VSCode Create Project](./images/vscode-create-java-project.gif)
+
+You will see many more options in the context menu of the application in Codewind view. Refer [this](https://www.eclipse.org/codewind/mdt-vsc-commands-project.html) to gather more detailed information.
 
 
+### Modify application:
 
-## Modify application:
+It is very easy to make the changes and deploy them. Let us modify Example.java file under `src/main/java/application/rest/v1`. 
+![Modify File](./images/vscode-modify-file.png)
 
-It is very easy to make the changes and deploy them. Let us modify app.py file under the root folder of the project. 
-![Modify File](./images/modify-python-file.png)
+Before making modification, check the response for http://localhost:port_no/v1/example, in a browser (get port_no from the home page of the application link from browser). 
+![Before modification](./images/vscode-before-modification.png)
 
-Modify the `Hello World!` string to `Hello World Again!` and save the file. Wait for a few moments for the changes to be built and deployed. Open the app again and now you should see the updated message `Hello World Again!` in browser window.
+Now, let us modify and change the display message to `Congratulations, your modified application is up and running!!!`. Save the file. Wait for a few moments for the changes to be built and deployed. Now check by invoking the rest api http://localhost:port_no/v1/example on your browser. 
+The modified message should be displayed. It is this easy to modify changes in a cloud native application. 
+![After modification](./images/after-modification.png)
 
 You can then go on to modify this application to add your business logic. This way you focus on just what is needed for the business logic and not worry about other environmental issues while building a cloud native application.
 
 
-## Debugging in Codewind
-Check Debugging Codewind projects [here](https://www.eclipse.org/codewind/mdteclipsedebugproject.html)
 
-Check troubleshooting guidelines for Codewind [here](https://www.eclipse.org/codewind/troubleshooting.html)
-
-## Uninstalling Codewind from eclipse?
-
-https://www.eclipse.org/codewind/mdteclipseuninstall.html
+### Troubleshooting
+Check troubleshooting guidelines for Codewind [here](https://www.eclipse.org/codewind/mdt-vsc-troubleshooting.html)
