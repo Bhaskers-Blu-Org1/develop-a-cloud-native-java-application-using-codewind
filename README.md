@@ -51,6 +51,7 @@ In this tutorial, let us create a project using **WebSphere Liberty Microprofile
 4. A new project is created with all the required directories and files for cloud native java application. Note that `Dockerfile` and `pom.xml` are created with the necessary entries.
 
 ![Project Structure](./images/project-structure.png)
+
 You can edit files to suit your needs.
 
 5. The project gets built, deployed and started.
@@ -79,6 +80,7 @@ You can then go on to modify this application to add your business logic. This w
 ### Troubleshooting
 
 Check [Debugging Codewind projects](https://www.eclipse.org/codewind/mdteclipsedebugproject.html)
+
 Check [troubleshooting guidelines for Codewind](https://www.eclipse.org/codewind/troubleshooting.html)
 
 
@@ -125,11 +127,9 @@ You will see many more options in the context menu of the application in Codewin
 It is very easy to make the changes and deploy them. Let us modify Example.java file under `src/main/java/application/rest/v1`. 
 ![Modify File](./images/vscode-modify-file.png)
 
-Before making modification, check the response for http://localhost:port_no/v1/example, in a browser (get port_no from the home page of the application link from browser). 
-![Before modification](./images/vscode-before-modification.png)
+Before making modification, check the response for `curl http://127.0.0.1:port_no/v1/example` (get port_no from the home page of the application link from browser). In the above image you can see the output.
 
-Now, let us modify and change the display message to `Congratulations, your modified application is up and running!!!`. Save the file. Wait for a few moments for the changes to be built and deployed. Now check by invoking the rest api http://localhost:port_no/v1/example on your browser. 
-The modified message should be displayed. It is this easy to modify changes in a cloud native application. 
+Now, let us modify and change the display message to `Congratulations, your modified application is up and running!!!`. Save the file. Wait for a few moments for the changes to be built and deployed. Now check the response for `curl http://127.0.0.1:port_no/v1/example`. The modified message should be displayed. It is this easy to modify changes in a cloud native application. 
 ![After modification](./images/vscode-after-modification.gif)
 
 You can then go on to modify this application to add your business logic. This way you focus on just what is needed for the business logic and not worry about other environmental issues while building a cloud native application.
@@ -137,4 +137,4 @@ You can then go on to modify this application to add your business logic. This w
 
 
 ### Troubleshooting
-Check troubleshooting guidelines for Codewind [here](https://www.eclipse.org/codewind/mdt-vsc-troubleshooting.html)
+Check [troubleshooting guidelines for Codewind](https://www.eclipse.org/codewind/mdt-vsc-troubleshooting.html)
