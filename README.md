@@ -49,8 +49,10 @@ In this tutorial, let us create a project using **WebSphere Liberty Microprofile
 3. Enter a name for the project and select `WebSphere Liberty MicroProfile` under templates. Click `Finish` to create the project. 
 ![Create Project](./images/create-microprofile-project.gif)
 4. A new project is created with all the required directories and files for cloud native java application. Note that `Dockerfile` and `pom.xml` are created with the necessary entries.
+
 ![Project Structure](./images/project-structure.png)
 You can edit files to suit your needs.
+
 5. The project gets built, deployed and started.
 6. A context menu on the project enables you to open your application in a browser, view application and build logs, restart in debug mode, and much more. Refer to [this link](https://www.eclipse.org/codewind/mdteclipsemanagingprojects.html) for the list of context menu items and their functionality.
 7. In Codewind Explorer view, right click on the project that was created in above step, and click `Open Application`. This opens the application in the default Eclipse browser. You can start using the application.
@@ -58,14 +60,17 @@ You can edit files to suit your needs.
 
 ### Modify application:
 
-It is very easy to make the changes and deploy them. Let us modify Example.java file under `src/main/java/application/rest/v1`. 
+It is very easy to make the changes and deploy them. Let us modify Example.java file under `src/main/java/application/rest/v1`.
+
 ![Modify File](./images/modify-file.png)
 
-Before making modification, check the response for http://localhost:port_no/v1/example, in a browser (get port_no from the home page of the application link from browser). 
+Before making modification, check the response for http://localhost:port_no/v1/example, in a browser (get port_no from the home page of the application link from browser).
+
 ![Before modification](./images/before-modification.png)
 
 Now, let us modify and change the display message to `Congratulations, your modified application is up and running!!!`. Save the file. Wait for a few moments for the changes to be built and deployed. Now check by invoking the rest api http://localhost:port_no/v1/example on your browser. 
 The modified message should be displayed. It is this easy to modify changes in a cloud native application. 
+
 ![After modification](./images/after-modification.gif)
 
 You can then go on to modify this application to add your business logic. This way you focus on just what is needed for the business logic and not worry about other environmental issues while building a cloud native application.
