@@ -49,9 +49,7 @@ In this tutorial, let us create a project using **WebSphere Liberty Microprofile
 3. Enter a name for the project and select `WebSphere Liberty MicroProfile` under templates. Click `Finish` to create the project. 
 ![Create Project](./images/create-microprofile-project.gif)
 4. A new project is created with all the required directories and files for cloud native java application. Note that `Dockerfile` and `pom.xml` are created with the necessary entries.
-
 ![Project Structure](./images/project-structure.png)
-
 You can edit files to suit your needs.
 5. The project gets built, deployed and started.
 6. A context menu on the project enables you to open your application in a browser, view application and build logs, restart in debug mode, and much more. Refer to [this link](https://www.eclipse.org/codewind/mdteclipsemanagingprojects.html) for the list of context menu items and their functionality.
