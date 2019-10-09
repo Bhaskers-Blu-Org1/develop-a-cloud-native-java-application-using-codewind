@@ -76,7 +76,6 @@ You can then go on to modify this application to add your business logic. This w
 ### Troubleshooting
 
 Check [Debugging Codewind projects](https://www.eclipse.org/codewind/mdteclipsedebugproject.html)
-
 Check [troubleshooting guidelines for Codewind](https://www.eclipse.org/codewind/troubleshooting.html)
 
 
