@@ -4,8 +4,6 @@
 
 Eclipse Codewind is an open source project that makes it easier for developers to create cloud-native applications within their favorite IDE. As of now, Codewind supports Visual Studio Code, Eclipse IDE and Eclipse Che. More editors will be added in the coming months.
 
-In this tutorial, we will provide steps to develop a cloud native applications using Codewind on Eclipse IDE and VS Code.
-
 Codewind enables you to create applications from templates and provide support for launching, updating, testing, and debugging in Docker containers on the desktop. Codewind also supports these features on Kubernetes. You can use Codewind to move existing applications to Docker and Kuberenetes. Codewind provides validation to ensure that applications follow best practices.
 
 Codewind helps you in building high-quality cloud-native applications for Kubernetes, regardless of your IDE or language.
@@ -15,11 +13,13 @@ This tutorial covers quickstart guide to develop cloud native java applications 
 
 ## Working with Codewind on Eclipse IDE
 
-Prerequisites:
+### Prerequisites
+
 - Download and install the latest [Eclipse IDE for Java EE Developers](https://www.eclipse.org/downloads/packages/release/) or use an existing installation. Eclipse IDE versions 4.11.0 onwards support Codewind. 
 - Install [Docker](https://docs.docker.com/install/)
 
-Install Codewind
+### Install Codewind
+
 1. Open the Eclipse IDE and navigate to Help > Eclipse Marketplace.
 2. Search for Codewind.
 3. Click the Install button.
@@ -48,11 +48,9 @@ In this tutorial, let us create a project using **WebSphere Liberty Microprofile
 2. Upon start, expand `Codewind` item and right click on `Local Projects` and click `New Project....`.
 3. Enter a name for the project and select `WebSphere Liberty MicroProfile` under templates. Click `Finish` to create the project. 
 ![Create Project](./images/create-microprofile-project.gif)
-4. A new project is created with all the required directories and files for cloud native java application. Note that `Dockerfile` and `pom.xml` are created with the necessary entries.
+4. A new project is created with all the required directories and files for cloud native java application. Note that `Dockerfile` and `pom.xml` are created with the necessary entries. You can edit files to suit your needs.
 
 ![Project Structure](./images/project-structure.png)
-
-You can edit files to suit your needs.
 
 5. The project gets built, deployed and started.
 6. A context menu on the project enables you to open your application in a browser, view application and build logs, restart in debug mode, and much more. Refer to [this link](https://www.eclipse.org/codewind/mdteclipsemanagingprojects.html) for the list of context menu items and their functionality.
