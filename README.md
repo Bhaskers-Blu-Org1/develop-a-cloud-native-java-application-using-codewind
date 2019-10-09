@@ -55,9 +55,9 @@ In this tutorial, let us create a project using **WebSphere Liberty Microprofile
 7. In Codewind Explorer view, right click on the project that was created in above step, and click `Open Application`. This opens the application in the default Eclipse browser. You can start using the application.
 
 
-### Modify application:
+### Modify application
 
-It is very easy to make the changes and deploy them. Let us modify Example.java file under `src/main/java/application/rest/v1`.
+It is very easy to make changes and deploy them. Let us modify Example.java file under `src/main/java/application/rest/v1`.
 
 ![Modify File](./images/modify-file.png)
 
@@ -82,11 +82,11 @@ Check [troubleshooting guidelines for Codewind](https://www.eclipse.org/codewind
 
 ## Working with Codewind on Visual Studio Code
 
-Prerequisites:
+### Prerequisites
 - Download and install [VS Code version 1.28 or later](https://code.visualstudio.com/download). 
 - Install [Docker](https://docs.docker.com/install/)
 
-Install Codewind
+### Install Codewind
 1. Launch VS Code IDE.
 2. In the menu bar, under `view` click `Extenstions`.
 3. In the search field, type `Codewind` and hit enter.
@@ -118,9 +118,9 @@ You can create your own template and use it to create a project. More details [H
 You will see many more options in the context menu of the application in Codewind view. Refer [this](https://www.eclipse.org/codewind/mdt-vsc-commands-project.html) to gather more detailed information.
 
 
-### Modify application:
+### Modify application
 
-It is very easy to make the changes and deploy them. Let us modify Example.java file under `src/main/java/application/rest/v1`. 
+It is very easy to make changes and deploy them. Let us modify Example.java file under `src/main/java/application/rest/v1`. 
 ![Modify File](./images/vscode-modify-file.png)
 
 Before making modification, check the response for `curl http://127.0.0.1:port_no/v1/example` (get port_no from the home page of the application link from browser). In the above image you can see the output.
