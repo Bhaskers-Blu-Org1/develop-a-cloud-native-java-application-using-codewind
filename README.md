@@ -1,8 +1,6 @@
-## Work in progress
-
 # Quickstart guide to develop a Cloud Native Java Application using Codewind
 
-Eclipse Codewind is an open source project that makes it easier for developers to create cloud-native applications within their favorite IDE. As of now, Codewind supports Visual Studio Code, Eclipse IDE and Eclipse Che. More editors will be added in the coming months.
+Codewind is an open source project that makes it easier for developers to create cloud-native applications within their favorite IDE. As of now, Codewind supports Visual Studio Code, Eclipse IDE and Eclipse Che. 
 
 Codewind enables you to create applications from templates and provide support for launching, updating, testing, and debugging in Docker containers on the desktop. Codewind also supports these features on Kubernetes. You can use Codewind to move existing applications to Docker and Kuberenetes. Codewind provides validation to ensure that applications follow best practices.
 
@@ -37,7 +35,7 @@ This tutorial covers quickstart guide to develop cloud native java applications 
 
 ### Project templates
 
-Codewind provides a set of templates available from which you can create a project. The templates are of different types - `Standard Codewind templates`, `Kabanero Collections`, `Appsody Stacks - appsodyhub`. Some of the templates available now are - **Go**, **Lagom Java**, **Node.js Express**, **Open Liberty**, **Python**, **Sprint Boot**, **Swift**, **WebSphere Liberty Microprofile**, **Loopback** etc.. More templates will be added subsequently.
+Codewind provides a set of templates available from which you can create a project. The templates are of different types - `Standard Codewind templates`, `Kabanero Collections`, `Appsody Stacks - appsodyhub`. Some of the templates available now are - **Go**, **Lagom Java**, **Node.js Express**, **Open Liberty**, **Python**, **Sprint Boot**, **Swift**, **WebSphere Liberty Microprofile**, **Loopback** etc.. 
 
 You can create your own template and use it to create a project. More details [Here](https://www.eclipse.org/codewind/mdteclipseusingadifferenttemplate.html).
 
@@ -53,6 +51,7 @@ In this tutorial, let us create a project using **WebSphere Liberty Microprofile
 5. The project gets built, deployed and started.
 6. A context menu on the project enables you to open your application in a browser, view application and build logs, restart in debug mode, and much more. Refer to [this link](https://www.eclipse.org/codewind/mdteclipsemanagingprojects.html) for the list of context menu items and their functionality.
 7. In Codewind Explorer view, right click on the project that was created in above step, and click `Open Application`. This opens the application in the default Eclipse browser. You can start using the application.
+![Before modification](./images/before-modification.png)
 
 
 ### Modify application
@@ -61,12 +60,8 @@ It is very easy to make changes and deploy them. Let us modify Example.java file
 
 ![Modify File](./images/modify-file.png)
 
-Before making modification, check the response for http://localhost:port_no/v1/example, in a browser (get port_no from the home page of the application link from browser).
-
-![Before modification](./images/before-modification.png)
-
-Now, let us modify and change the display message to `Congratulations, your modified application is up and running!!!`. Save the file. Wait for a few moments for the changes to be built and deployed. Now check by invoking the rest api http://localhost:port_no/v1/example on your browser. 
-The modified message should be displayed. It is this easy to modify changes in a cloud native application. 
+Now, let us modify and change the display message to `Congratulations, your modified application is up and running!!!`. Save the file. Wait for a few moments for the changes be automatically to be built and deployed. Now check by invoking the rest api http://localhost:xxxx/v1/example on your browser (get port nunmber from the home page of the application link from browser). 
+The modified message should be displayed. It is this easy to make changes to a cloud native application and test the changes instantly. 
 
 ![After modification](./images/after-modification.gif)
 
@@ -75,8 +70,9 @@ You can then go on to modify this application to add your business logic. This w
 
 ### Troubleshooting
 
-Check [Debugging Codewind projects](https://www.eclipse.org/codewind/mdteclipsedebugproject.html)
-Check [troubleshooting guidelines for Codewind](https://www.eclipse.org/codewind/troubleshooting.html)
+Check [Debugging Codewind projects](https://www.eclipse.org/codewind/mdteclipsedebugproject.html).
+
+Check [troubleshooting guidelines for Codewind](https://www.eclipse.org/codewind/troubleshooting.html).
 
 
 ## Working with Codewind on Visual Studio Code
@@ -87,7 +83,7 @@ Check [troubleshooting guidelines for Codewind](https://www.eclipse.org/codewind
 
 ### Install Codewind
 1. Launch VS Code IDE.
-2. In the menu bar, under `view` click `Extenstions`.
+2. In the menu bar, under `View` click `Extenstions`.
 3. In the search field, type `Codewind` and hit enter.
 4. Install Codewind by clicking on `Install` button against Codewind entry.
 5. Codewind requires the installation of additional Docker images to run. Choose Install when prompted to complete the installation. The installation may take a few minutes to complete.
@@ -100,7 +96,8 @@ Codewind is now installed.
 
 ### Project templates
 
-Codewind provides a set of templates available from which you can create a project. `Standard Codewind templates`, `Kabanero Collections`, `Appsody Stacks - appsodyhub` contain templates. These have the following templates, as of now and more templates will be added - **Go**, **Lagom Java**, **Node.js Express**, **Open Liberty**, **Python**, **Sprint Boot**, **Swift**, **WebSphere Liberty Microprofile**, **Loopback** etc..
+Codewind provides a set of templates available from which you can create a project. `Standard Codewind templates`, `Kabanero Collections`, `Appsody Stacks - appsodyhub` contain templates. These have the following templates, as of now, - **Go**, **Lagom Java**, **Node.js Express**, **Open Liberty**, **Python**, **Sprint Boot**, **Swift**, **WebSphere Liberty Microprofile**, **Loopback** etc..
+
 You can create your own template and use it to create a project. More details [Here](https://www.eclipse.org/codewind/mdteclipseusingadifferenttemplate.html).
 
 
@@ -122,14 +119,13 @@ You will see many more options in the context menu of the application in Codewin
 It is very easy to make changes and deploy them. Let us modify Example.java file under `src/main/java/application/rest/v1`. 
 ![Modify File](./images/vscode-modify-file.png)
 
-Before making modification, check the response for `curl http://127.0.0.1:port_no/v1/example` (get port_no from the home page of the application link from browser). In the above image you can see the output.
+Before making modification, check the response for `curl http://127.0.0.1:xxxx/v1/example` (get port nunmber from the home page of the application link from browser, after opening the app from it's context menu). In the above image you can see the output in the terminal view of VS Code editor.
 
-Now, let us modify and change the display message to `Congratulations, your modified application is up and running!!!`. Save the file. Wait for a few moments for the changes to be built and deployed. Now check the response for `curl http://127.0.0.1:port_no/v1/example`. The modified message should be displayed. It is this easy to modify changes in a cloud native application. 
+Now, let us modify and change the display message to `Congratulations, your modified application is up and running!!!`. Save the file. Wait for a few moments for the changes to be automatically built and deployed. Now check the response for `curl http://127.0.0.1:xxxx/v1/example`. The modified message should be displayed. It is this easy to make changes to a cloud native application and test the changes instantly. Check the changes reflect in the below gif image in the tremical section of VS Code editor.
 ![After modification](./images/vscode-after-modification.gif)
 
 You can then go on to modify this application to add your business logic. This way you focus on just what is needed for the business logic and not worry about other environmental issues while building a cloud native application.
 
 
-
 ### Troubleshooting
-Check [troubleshooting guidelines for Codewind](https://www.eclipse.org/codewind/mdt-vsc-troubleshooting.html)
+Check [troubleshooting guidelines for Codewind](https://www.eclipse.org/codewind/mdt-vsc-troubleshooting.html).
